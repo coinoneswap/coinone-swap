@@ -44,14 +44,12 @@ contract CoinoneFactory is ICoinoneFactory {
     function setFeeTo(address _feeTo) external {
         require(msg.sender == feeToSetter, 'Coinone: FORBIDDEN'); 
         require(_feeTo != address(0), "_feeTo is zero address!");
-        require(msg.sender == feeToSetter, 'Coinone: FORBIDDEN');
         feeTo = _feeTo;
     }
 
     function setFeeToSetter(address _feeToSetter) external {
         require(msg.sender == feeToSetter, 'Coinone: FORBIDDEN');
         require(_feeToSetter != address(0), "_feeToSetter is zero address!");
-        require(msg.sender == feeToSetter, 'Coinone: FORBIDDEN');
         feeToSetter = _feeToSetter;
     }
 }
